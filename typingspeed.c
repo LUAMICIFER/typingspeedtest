@@ -2,7 +2,9 @@
 #include <string.h>
 #include<time.h>
 #include<unistd.h>
+#include<stdlib.h>
 int main() {
+  
   float speed;
       time_t seconds;
       time_t seconds1;
@@ -24,7 +26,10 @@ int main() {
   }
   seconds1 = time(NULL);
 speed=f*60/(seconds1-seconds);
-  printf("number of words typed right: %f \n",f);
-  printf("%f",speed);
+  printf("\n \n Number Of Words Typed Right: %f \n",f);
+  printf("\n speed= %f wpm\n",speed);
+  printf("\n accuracy %f percent\n",f*100/35);
+  printf("\n wrong words %f\n",35-f);
+  printf("\n time taken %ld seconds\n",(seconds1-seconds));
   return 0;
 }
